@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio. — Archana Roy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Outfit: geometric modern sans — perfect for developer portfolio -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 
+       NAV
+   -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">portfolio<span class="dot">.</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home"     class="nav__link">Home</a></li>
+        <li><a href="#skills"   class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#resume"   class="nav__link">Resume</a></li>
+        <li><a href="#contact"  class="nav__link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!--
+       HERO
+   -->
+  <section id="home" class="hero">
+    <!-- Decorative crosses top-left -->
+    <div class="hero__crosses" aria-hidden="true"><span>×</span><span>×</span></div>
+    <!-- Decorative dots pattern top-right -->
+    <div class="hero__dots" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+      <!-- Left: text -->
+      <div class="hero__text">
+        <p class="label reveal">Full Stack Developer</p>
+        <h1 class="hero__h1 reveal delay-1">Hi, I'm<br /><strong>Archana Roy</strong></h1>
+        <div class="hero__rule reveal delay-2"></div>
+        <p class="hero__tagline reveal delay-3">
+          I build clean, performant web applications with modern
+          technologies. Passionate about crafting digital experiences that matter.
+        </p>
+        <div class="hero__actions reveal delay-4">
+          <a href="#projects" class="btn btn--dark">View Projects</a>
+          <a href="#contact"  class="btn btn--outline">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- Right: photo card -->
+      <div class="hero__photo-wrap reveal delay-2">
+        <div class="hero__photo-card">
+         
+          <img src="formal.jpeg" alt="">
+        </div>
+        <!-- Corner decoration -->
+        <div class="hero__photo-corner" aria-hidden="true">×&thinsp;×<br />×&thinsp;×</div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero__scroll" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 
+       SKILLS
+  -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="label">What I Work With</p>
+        <h2>Tech Stack</h2>
+        <p class="section-sub">Tools and technologies I use to bring ideas to life.</p>
+      </div>
+      <div class="skills__grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <div>
+            <p class="skill-card__cat">FRONTEND</p>
+            <p class="skill-card__name">React / Next.js</p>
+          </div>
+        </div>
+
+        <div class="skill-card reveal delay-1">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div>
+            <p class="skill-card__cat">LANGUAGE</p>
+            <p class="skill-card__name">Java</p>
+          </div>
+        </div>
+
+        <div class="skill-card reveal delay-2">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="4" rx="1"/><rect x="2" y="14" width="20" height="4" rx="1"/></svg>
+          </div>
+          <div>
+            <p class="skill-card__cat">BACKEND</p>
+            <p class="skill-card__name">Node.js/Express</p>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+          </div>
+          <div>
+            <p class="skill-card__cat">DATABASE</p>
+            <p class="skill-card__name">MySQL / MongoDB</p>
+          </div>
+        </div>
+
+        <div class="skill-card reveal delay-1">
+          <div class="skill-card__icon skill-card__icon--warm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"/></svg>
+          </div>
+          <div>
+            <p class="skill-card__cat">APIS</p>
+            <p class="skill-card__name">REST &amp; GraphQL APIs</p>
+          </div>
+        </div>
+
+        <div class="skill-card reveal delay-2">
+          <div class="skill-card__icon skill-card__icon--warm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <div>
+            <p class="skill-card__cat">DEVOPS</p>
+            <p class="skill-card__name">Git / Docker / CI-CD</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+       PROJECTS
+ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="label">Selected Work</p>
+        <h2>Projects</h2>
+        <p class="section-sub">A few things I've built recently.</p>
+      </div>
+      <div class="projects__grid">
+
+        <article class="project-card reveal">
+          <h3 class="project-card__title">Flora</h3>
+          <p class="project-card__desc">A clean and user-friendly platform designed to showcase and manage plant collections with an elegant digital experience..</p>
+          <div class="project-card__tags">
+            <span class="tag">Html</span><span class="tag">Css</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/Archanaroy-13/FlowerShop" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
+            </a>
+            <a href="https://archanaroy-13.github.io/FlowerShop/" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <h3 class="project-card__title">Foodhub</h3>
+          <p class="project-card__desc">Clean resturent based website for a client.</p>
+          <div class="project-card__tags">
+            <span class="tag">React</span><span class="tag">Node. JS</span><span class="tag">Express.js</span><span class="tag">MongoDB</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/Archanaroy-13/Foodhub-Fullstack-food-ordering-web-platform" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
+            </a>
+            <a href="#" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <h3 class="project-card__title">Streamify</h3>
+          <p class="project-card__desc">Streamify is a real-time video calling and chat app</p>
+          <div class="project-card__tags">
+            <span class="tag">Go</span><span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">Terraform</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/Archanaroy-13/Streamify-Real-Time-Video-Chat-Application" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
+            </a>
+            <a href="#" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal delay-1">
+          <h3 class="project-card__title">EzStorage</h3>
+          <p class="project-card__desc">EzStorage is a website where student can register as client and store their belongings to take care of while they go on vacations or semester break.</p>
+          <div class="project-card__tags">
+            <span class="tag">React</span><span class="tag">Node. JS</span><span class="tag">MongoDb</span><span class="tag">Tailwind</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/Archanaroy-13/Ezstorage-A-Fullstack-storage-unit-web-platform-for-students" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
+            </a>
+            <a href="#" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!--
+       RESUME
+ -->
+  <section id="resume" class="section resume">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="label">Background</p>
+        <h2>Resume</h2>
+        <p class="section-sub">A snapshot of my experience and education.</p>
+      </div>
+      <div class="resume__grid">
+
+        <div class="resume__col reveal">
+          <h3 class="resume__col-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Experience 
+          </h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <p class="tl-date">2023 — PRESENT</p>
+              <h4 class="tl-role">Full Stack Developer</h4>
+              <p class="tl-place">TechCorp Inc. — Building scalable web applications with React and Node.js</p>
+            </div>
+            <div class="tl-item">
+              <p class="tl-date">2021 — 2023</p>
+              <h4 class="tl-role">Frontend Developer</h4>
+              <p class="tl-place">StartupXYZ — Led UI development for SaaS platform serving 10k+ users</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume__col reveal delay-1">
+          <h3 class="resume__col-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Education
+          </h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <p class="tl-date">2017 — 2021</p>
+              <h4 class="tl-role">B.S. Computer Science</h4>
+              <p class="tl-place">University of Technology — GPA 3.8 / 4.0</p>
+            </div>
+            <div class="tl-item">
+              <p class="tl-date">2020</p>
+              <h4 class="tl-role">AWS Certified Developer</h4>
+              <p class="tl-place">Amazon Web Services — Associate Level</p>
+            </div>
+          </div>
+        </div>
+<!-- hi -->
+      </div>
+      <div class="resume__cta reveal">
+        <a href="./Archana_Roy_CV.pdf" class="btn btn--dark" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+       CONTACT
+  -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="label">Get in Touch</p>
+        <h2>Contact Me</h2>
+        <p class="section-sub">Have a project in mind? Let's talk.</p>
+      </div>
+      <div class="contact__grid">
+
+        <!-- Form -->
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--dark btn--full">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+
+        <!-- Connect sidebar -->
+        <div class="contact__info reveal delay-1">
+          <div class="contact__blurb">
+            <h3>Let's connect</h3>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            <a href="mailto:alex@example.com" class="contact__email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Archanaroy1309@gmail.com
+            </a>
+          </div>
+          <div class="contact__socials">
+            <p class="contact__socials-label">FIND ME ON</p>
+            <div class="social-row">
+              <a href="https://github.com/Archanaroy-13" class="social-btn" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/archanaroy- " class="social-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" class="social-btn" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+       FOOTER
+   -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand">portfolio<span class="dot">.</span></span>
+      <p class="footer__copy">© 2026 Archana Roy. Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
