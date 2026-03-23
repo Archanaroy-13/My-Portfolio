@@ -1,5 +1,5 @@
 /* =====================================================
-   PORTFOLIO — script.js
+   PORTFOLIO — main.js
    ===================================================== */
 
 /* ── Navbar: scroll shadow + hamburger ──────────────── */
@@ -8,21 +8,17 @@
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
 
-  // Add scrolled class for frosted glass effect
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run on load
+  onScroll();
 
-  // Hamburger toggle
   hamburger.addEventListener('click', () => {
     const open = hamburger.classList.toggle('open');
     navLinks.classList.toggle('open', open);
     hamburger.setAttribute('aria-expanded', open);
-    // Prevent body scroll when menu open
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  // Close nav on link click
   navLinks.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
@@ -72,11 +68,26 @@
 })();
 
 
-/* ── Contact form ───────────────────────────────────── */
+/* ── Contact form → sends email to archanaroy1309@gmail.com ─
+   
+   Uses Formspree (free, no backend required):
+   1. Go to https://formspree.io and sign up / log in
+   2. Click "New Form", set the email to archanaroy1309@gmail.com
+   3. Copy the form ID (looks like: xpwzgkla)
+   4. Replace YOUR_FORMSPREE_ID below with that ID
+
+   Once done, every submission from the contact form will be
+   delivered straight to archanaroy1309@gmail.com.
+──────────────────────────────────────────────────────────── */
 (function initForm() {
+  const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // ← replace with your Formspree form ID
+
   const form   = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
+  const btn    = document.getElementById('submitBtn');
   if (!form) return;
+
+  const originalBtnHTML = btn.innerHTML;
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
@@ -86,28 +97,54 @@
     const message = form.message.value.trim();
 
     if (!name || !email || !message) {
-      flash('Please fill in all fields.', false); return;
+      flash('Please fill in all fields.', false);
+      return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      flash('Please enter a valid email.', false); return;
+      flash('Please enter a valid email.', false);
+      return;
     }
 
-    const btn = form.querySelector('button[type="submit"]');
+    // Show loading state
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    // Simulate async send — replace with real fetch() to your endpoint
-    await new Promise(r => setTimeout(r, 1300));
+    /* ── If Formspree ID is set, use it ── */
+    if (FORMSPREE_ID && FORMSPREE_ID !== 'YOUR_FORMSPREE_ID') {
+      try {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name, email, message })
+        });
 
-    flash('Message sent! I\'ll be in touch soon ✓', true);
-    form.reset();
-    btn.disabled = false;
-    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
+        if (res.ok) {
+          flash('Message sent! I\'ll be in touch soon ✓', true);
+          form.reset();
+        } else {
+          const data = await res.json().catch(() => ({}));
+          flash(data.error || 'Something went wrong. Please try again.', false);
+        }
+      } catch {
+        flash('Network error. Please email me directly.', false);
+      }
+    } else {
+      /* ── Fallback: open default mail client ── */
+      const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+      const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      window.open(`mailto:Archanaroy1309@gmail.com?subject=${subject}&body=${body}`);
+      await new Promise(r => setTimeout(r, 800));
+      flash('Opening your mail client… ✓', true);
+      form.reset();
+    }
+
+    btn.disabled  = false;
+    btn.innerHTML = originalBtnHTML;
   });
 
   function flash(msg, ok) {
-    status.textContent  = msg;
-    status.style.color  = ok ? 'var(--accent)' : '#b85c38';
+    status.textContent = msg;
+    status.style.color = ok ? 'var(--accent)' : '#b85c38';
     setTimeout(() => { status.textContent = ''; }, 5000);
   }
 })();
@@ -115,7 +152,6 @@
 
 /* ── Button ripple micro-interaction ────────────────── */
 (function initRipple() {
-  // Inject keyframe once
   const style = document.createElement('style');
   style.textContent = `@keyframes _ripple { to { transform: scale(3); opacity: 0; } }`;
   document.head.appendChild(style);
@@ -127,17 +163,17 @@
       const ripple = document.createElement('span');
 
       Object.assign(ripple.style, {
-        position:     'absolute',
-        width:        size + 'px',
-        height:       size + 'px',
-        left:         (e.clientX - rect.left - size / 2) + 'px',
-        top:          (e.clientY - rect.top  - size / 2) + 'px',
-        borderRadius: '50%',
-        background:   'rgba(255,255,255,0.15)',
-        transform:    'scale(0)',
-        animation:    '_ripple 0.5s ease-out forwards',
-        pointerEvents:'none',
-        zIndex:       '0',
+        position:      'absolute',
+        width:         size + 'px',
+        height:        size + 'px',
+        left:          (e.clientX - rect.left - size / 2) + 'px',
+        top:           (e.clientY - rect.top  - size / 2) + 'px',
+        borderRadius:  '50%',
+        background:    'rgba(255,255,255,0.15)',
+        transform:     'scale(0)',
+        animation:     '_ripple 0.5s ease-out forwards',
+        pointerEvents: 'none',
+        zIndex:        '0',
       });
 
       btn.style.position = 'relative';

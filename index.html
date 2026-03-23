@@ -7,23 +7,21 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Outfit: geometric modern sans — perfect for developer portfolio -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- 
-       NAV
-   -->
+  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#home" class="nav__logo">portfolio<span class="dot">.</span></a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#home"     class="nav__link">Home</a></li>
-        <li><a href="#skills"   class="nav__link">Skills</a></li>
-        <li><a href="#projects" class="nav__link">Projects</a></li>
-        <li><a href="#resume"   class="nav__link">Resume</a></li>
-        <li><a href="#contact"  class="nav__link">Contact</a></li>
+        <li><a href="#home"         class="nav__link">Home</a></li>
+        <li><a href="#skills"       class="nav__link">Skills</a></li>
+        <li><a href="#certificates" class="nav__link">Certificates</a></li>
+        <li><a href="#projects"     class="nav__link">Projects</a></li>
+        <li><a href="#resume"       class="nav__link">Resume</a></li>
+        <li><a href="#contact"      class="nav__link">Contact</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -31,17 +29,12 @@
     </div>
   </nav>
 
-  <!--
-       HERO
-   -->
+  <!-- HERO -->
   <section id="home" class="hero">
-    <!-- Decorative crosses top-left -->
     <div class="hero__crosses" aria-hidden="true"><span>×</span><span>×</span></div>
-    <!-- Decorative dots pattern top-right -->
     <div class="hero__dots" aria-hidden="true"></div>
 
     <div class="container hero__inner">
-      <!-- Left: text -->
       <div class="hero__text">
         <p class="label reveal">Full Stack Developer</p>
         <h1 class="hero__h1 reveal delay-1">Hi, I'm<br /><strong>Archana Roy</strong></h1>
@@ -56,18 +49,14 @@
         </div>
       </div>
 
-      <!-- Right: photo card -->
       <div class="hero__photo-wrap reveal delay-2">
         <div class="hero__photo-card">
-         
-          <img src="formal.jpeg" alt="">
+          <img src="formal.jpeg" alt="Archana Roy" />
         </div>
-        <!-- Corner decoration -->
         <div class="hero__photo-corner" aria-hidden="true">×&thinsp;×<br />×&thinsp;×</div>
       </div>
     </div>
 
-    <!-- Scroll hint -->
     <div class="hero__scroll" aria-hidden="true">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
@@ -75,9 +64,7 @@
     </div>
   </section>
 
-  <!-- 
-       SKILLS
-  -->
+  <!-- SKILLS -->
   <section id="skills" class="section skills">
     <div class="container">
       <div class="section-head reveal">
@@ -151,9 +138,85 @@
     </div>
   </section>
 
-  <!-- 
-       PROJECTS
- -->
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="section certificates">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="label">Credentials</p>
+        <h2>Certificates</h2>
+        <p class="section-sub">Recognition of skills earned through learning and dedication.</p>
+      </div>
+
+      <div class="cert__grid">
+        <article class="cert-card reveal delay-1">
+          <div class="cert-card__ribbon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M8.56 13.9L7 22l5-3 5 3-1.56-8.1"/>
+            </svg>
+          </div>
+          <div class="cert-card__body">
+            <span class="cert-card__issuer">Archana Roy · 2026</span>
+            <h3 class="cert-card__title">Social Networks</h3>
+            <p class="cert-card__desc">A short description of what this certification covers and the skills it validates.</p>
+          </div>
+          <div class="cert-card__footer">
+           
+            <a href="https://onlinecourses.nptel.ac.in/noc26_cs82/announcements?force=true" class="cert-card__verify" target="_blank" rel="noopener">
+              Verify
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="cert-card reveal">
+          <div class="cert-card__ribbon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M8.56 13.9L7 22l5-3 5 3-1.56-8.1"/>
+            </svg>
+          </div>
+          <div class="cert-card__body">
+            <span class="cert-card__issuer">Archana Roy · 2025</span>
+            <h3 class="cert-card__title">App Development with JAVA</h3>
+            <p class="cert-card__desc">Certified in App Development with Java, with hands-on experience in building and understanding application workflows.</p>
+          </div>
+          <div class="cert-card__footer">
+            <!-- <span class="cert-card__id">Credential ID: XXXX-XXXX</span> -->
+<a href="https://drive.google.com/file/d/1rQVFk-9Fr0vvKsaB7V-XFW57kcX03fit/view?usp=sharing" class="cert-card__verify" target="_blank" rel="noopener">              Verify
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        
+
+        <article class="cert-card reveal delay-2">
+          <div class="cert-card__ribbon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M8.56 13.9L7 22l5-3 5 3-1.56-8.1"/>
+            </svg>
+          </div>
+          <div class="cert-card__body">
+            <span class="cert-card__issuer">Archana Roy · 2025</span>
+            <h3 class="cert-card__title">Build Generative AI Apps and Solutions with No-Code Tools</h3>
+            <p class="cert-card__desc">Built and deployed generative AI applications using no-code tools, enabling rapid development of intelligent, automated solutions without traditional programming.</p>
+          </div>
+          <div class="cert-card__footer">
+            <!-- <span class="cert-card__id">Credential ID: XXXX-XXXX</span> -->
+            <a href="https://drive.google.com/file/d/16kOoJeA0oxJX3XQBKk8bCFg9CqjyfW8G/view?usp=sharing" class="cert-card__verify" target="_blank" rel="noopener">
+              Verify
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
   <section id="projects" class="section projects">
     <div class="container">
       <div class="section-head reveal">
@@ -165,64 +228,64 @@
 
         <article class="project-card reveal">
           <h3 class="project-card__title">Flora</h3>
-          <p class="project-card__desc">A clean and user-friendly platform designed to showcase and manage plant collections with an elegant digital experience..</p>
+          <p class="project-card__desc">A clean and user-friendly platform designed to showcase and manage plant collections with an elegant digital experience.</p>
           <div class="project-card__tags">
             <span class="tag">Html</span><span class="tag">Css</span><span class="tag">JavaScript</span>
           </div>
           <div class="project-card__links">
             <a href="https://github.com/Archanaroy-13/FlowerShop" class="proj-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
             </a>
-            <a href="https://archanaroy-13.github.io/FlowerShop/" class="proj-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
+            <a href="https://flora-flowershop.vercel.app/" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
             </a>
           </div>
         </article>
 
         <article class="project-card reveal delay-1">
           <h3 class="project-card__title">Foodhub</h3>
-          <p class="project-card__desc">Clean resturent based website for a client.</p>
+          <p class="project-card__desc">Clean restaurant based website for a client.</p>
           <div class="project-card__tags">
-            <span class="tag">React</span><span class="tag">Node. JS</span><span class="tag">Express.js</span><span class="tag">MongoDB</span>
+            <span class="tag">React</span><span class="tag">Node.JS</span><span class="tag">Express.js</span><span class="tag">MongoDB</span>
           </div>
           <div class="project-card__links">
             <a href="https://github.com/Archanaroy-13/Foodhub-Fullstack-food-ordering-web-platform" class="proj-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
             </a>
             <a href="https://resto-management-frontend.vercel.app/" class="proj-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
             </a>
           </div>
         </article>
 
         <article class="project-card reveal">
           <h3 class="project-card__title">Streamify</h3>
-          <p class="project-card__desc">Streamify is a real-time video calling and chat app</p>
+          <p class="project-card__desc">Streamify is a real-time video calling and chat app.</p>
           <div class="project-card__tags">
             <span class="tag">Go</span><span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">Terraform</span>
           </div>
           <div class="project-card__links">
             <a href="https://github.com/Archanaroy-13/Streamify-Real-Time-Video-Chat-Application" class="proj-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
             </a>
             <a href="#" class="proj-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
             </a>
           </div>
         </article>
 
         <article class="project-card reveal delay-1">
           <h3 class="project-card__title">EzStorage</h3>
-          <p class="project-card__desc">EzStorage is a website where student can register as client and store their belongings to take care of while they go on vacations or semester break.</p>
+          <p class="project-card__desc">EzStorage is a website where students can register as a client and store their belongings while they go on vacations or semester break.</p>
           <div class="project-card__tags">
-            <span class="tag">React</span><span class="tag">Node. JS</span><span class="tag">MongoDb</span><span class="tag">Tailwind</span>
+            <span class="tag">React</span><span class="tag">Node.JS</span><span class="tag">MongoDB</span><span class="tag">Tailwind</span>
           </div>
           <div class="project-card__links">
             <a href="https://github.com/Archanaroy-13/Ezstorage-A-Fullstack-storage-unit-web-platform-for-students" class="proj-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> Code
             </a>
-            <a href="#" class="proj-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
+            <a href="https://ezstorage-store.vercel.app/" class="proj-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Live
             </a>
           </div>
         </article>
@@ -231,9 +294,7 @@
     </div>
   </section>
 
-  <!--
-       RESUME
- -->
+  <!-- RESUME -->
   <section id="resume" class="section resume">
     <div class="container">
       <div class="section-head reveal">
@@ -245,55 +306,53 @@
 
         <div class="resume__col reveal">
           <h3 class="resume__col-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-            Experience 
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Experience
           </h3>
           <div class="timeline">
             <div class="tl-item">
-              <p class="tl-date">2025-2026</p>
+              <p class="tl-date">2025–2026</p>
               <h4 class="tl-role">Freelanced the Foodhub Project</h4>
               <p class="tl-place">Earned 10k+ from freelancing</p>
             </div>
             <div class="tl-item">
-              <p class="tl-date">May'25</p>
-              <h4 class="tl-role">Started a bussiness EZstorage</h4>
-              <p class="tl-place">Earned 30k+ from there </p>
+              <p class="tl-date">May '25</p>
+              <h4 class="tl-role">Started a business EZStorage</h4>
+              <p class="tl-place">Earned 30k+ from there</p>
             </div>
           </div>
         </div>
 
         <div class="resume__col reveal delay-1">
           <h3 class="resume__col-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             Education
           </h3>
           <div class="timeline">
             <div class="tl-item">
-              <p class="tl-date">2023-present</p>
-              <h4 class="tl-role">Lovely Proffesional University</h4>
+              <p class="tl-date">2023–present</p>
+              <h4 class="tl-role">Lovely Professional University</h4>
               <p class="tl-place">Specializing in Fullstack Development</p>
             </div>
             <div class="tl-item">
-              <p class="tl-date">2021-2023</p>
-              <h4 class="tl-role">Saktinagar High school</h4>
-              <p class="tl-place">pursued PCMB</p>
+              <p class="tl-date">2021–2023</p>
+              <h4 class="tl-role">Saktinagar High School</h4>
+              <p class="tl-place">Pursued PCMB</p>
             </div>
           </div>
         </div>
-<!-- hi -->
+
       </div>
       <div class="resume__cta reveal">
         <a href="./Archana_Roy_CV.pdf" class="btn btn--dark" download>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Resume
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 
-       CONTACT
-  -->
+  <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="container">
       <div class="section-head reveal">
@@ -303,7 +362,6 @@
       </div>
       <div class="contact__grid">
 
-        <!-- Form -->
         <form class="contact__form reveal" id="contactForm" novalidate>
           <div class="form-group">
             <label for="name">Name</label>
@@ -317,20 +375,19 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
           </div>
-          <button type="submit" class="btn btn--dark btn--full">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <button type="submit" class="btn btn--dark btn--full" id="submitBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             Send Message
           </button>
           <p class="form-status" id="formStatus"></p>
         </form>
 
-        <!-- Connect sidebar -->
         <div class="contact__info reveal delay-1">
           <div class="contact__blurb">
             <h3>Let's connect</h3>
             <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-            <a href="mailto:alex@example.com" class="contact__email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:Archanaroy1309@gmail.com" class="contact__email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               Archanaroy1309@gmail.com
             </a>
           </div>
@@ -340,10 +397,9 @@
               <a href="https://github.com/Archanaroy-13" class="social-btn" aria-label="GitHub">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               </a>
-              <a href="https://www.linkedin.com/in/archanaroy- " class="social-btn" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/archanaroy-" class="social-btn" aria-label="LinkedIn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
-              
             </div>
           </div>
         </div>
@@ -352,9 +408,7 @@
     </div>
   </section>
 
-  <!-- 
-       FOOTER
-   -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <span class="footer__brand">portfolio<span class="dot">.</span></span>
